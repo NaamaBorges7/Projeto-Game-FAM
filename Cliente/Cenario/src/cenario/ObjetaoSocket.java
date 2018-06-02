@@ -1,6 +1,12 @@
 package cenario;
 
-//import Entidades.*;
+import Entidades.*;
+
+import Entidades.PersonagemDTO;
+import Entidades.JogadorDTO;
+import Entidades.HistoricoBatalhaDTO;
+import Entidades.BatalhaDTO;
+
 
 public class ObjetaoSocket {
     public String mensagem;
