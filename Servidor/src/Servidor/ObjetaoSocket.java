@@ -1,3 +1,5 @@
+package Servidor;
+
 import Entidades.*;
 
 public class ObjetaoSocket {

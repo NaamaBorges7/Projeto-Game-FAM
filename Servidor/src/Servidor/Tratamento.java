@@ -1,3 +1,5 @@
+package Servidor;
+
 
 import ConexaoBanco.ConexaoSQLite;
 import java.net.ServerSocket;
