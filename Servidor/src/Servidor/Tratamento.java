@@ -47,7 +47,7 @@ public class Tratamento extends Thread {
             // sendo assim resposta recebe o objetao e retorna os dados ao cliente 
             if (verificar.equalsIgnoreCase("objetao")) {
                 resposta = objetaoSocket;
-                mensagem = JOptionPane.showInputDialog(null,"conectou");
+                mensagem ="enviou";
   }
             else
             {
@@ -57,6 +57,9 @@ public class Tratamento extends Thread {
             oos.flush();
             // enviando resposta com objeto ao cliente
             oos.writeObject(resposta);
+            
+                   oos = new ObjectOutputStream(socket.getOutputStream());
+            oos.flush();
          oos.writeObject(mensagem);
                     
                     
