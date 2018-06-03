@@ -42,16 +42,31 @@ public class Jogo {
         
            try {
        String mensagem;
+                ObjetaoSocket objetaoSocket = new ObjetaoSocket();
+            // atribuir a variavel resposta os dados do objetão
+            ObjetaoSocket resposta = objetaoSocket;
+       
+       
+       
+       
        ObjectOutputStream oos;
        ObjectInputStream ois;
        Socket cliente = new Socket(IPServidor,PortaServidor );
        oos = new ObjectOutputStream(cliente.getOutputStream());
        oos.flush();
+       
        // se a conexao for feita mando uma mensagem para com a palavra objtao 
        oos.writeObject("objetao");
+       
        ois = new ObjectInputStream(cliente.getInputStream());
+       resposta = (ObjetaoSocket) ois.readObject();
+
+   
+       
+            ois = new ObjectInputStream(cliente.getInputStream());
        mensagem = (String) ois.readObject();
        JOptionPane.showMessageDialog(null, mensagem);
+       
        ois.close();
        oos.close();
        System.exit(0);

@@ -5,9 +5,11 @@
  */
 package cenario;
 
+import Jogo.Jogador;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

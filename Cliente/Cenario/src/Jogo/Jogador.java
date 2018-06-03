@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cenario;
+package Jogo;
 
 
+import cenario.Personagem;
+import cenario.Utils;
 import java.util.Random;
 
 /**
