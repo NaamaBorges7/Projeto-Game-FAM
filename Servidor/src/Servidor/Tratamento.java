@@ -37,7 +37,7 @@ public class Tratamento extends Thread {
             // instanciar o objetao
             ObjetaoSocket objetaoSocket = new ObjetaoSocket();
             // atribuir a variavel resposta os dados do objetão
-            ObjetaoSocket resposta = objetaoSocket;
+          
 // criar um input para verificar os dados do jogador
             ois = new ObjectInputStream(socket.getInputStream());
             // verifica se a mensagen do cliete
@@ -46,17 +46,19 @@ public class Tratamento extends Thread {
             // se a mensagen do cliente for objetao significa que os dados do jogo foram preenchidos de um dos clientes
             // sendo assim resposta recebe o objetao e retorna os dados ao cliente 
             if (verificar.equalsIgnoreCase("objetao")) {
-                resposta = objetaoSocket;
+          oos = new ObjectOutputStream(socket.getOutputStream());
+            oos.flush();
+            // enviando resposta com objeto ao cliente
+            oos.writeObject(objetaoSocket);
+            
+            
                 mensagem ="enviou";
   }
             else
             {
          
             }
-            oos = new ObjectOutputStream(socket.getOutputStream());
-            oos.flush();
-            // enviando resposta com objeto ao cliente
-            oos.writeObject(resposta);
+        
             
                    oos = new ObjectOutputStream(socket.getOutputStream());
             oos.flush();
